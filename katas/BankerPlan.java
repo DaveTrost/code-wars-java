@@ -1,4 +1,4 @@
-package java;
+package katas;
 
 public class BankerPlan {
     

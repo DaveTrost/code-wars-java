@@ -1,4 +1,4 @@
-package java.extra_perfect_numbers;
+package katas.extra_perfect_numbers;
 
 import java.util.List;
 import java.util.ArrayList; 
