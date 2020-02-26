@@ -14,19 +14,21 @@ public class ProdSeq {
   }
 
   private static BigInteger getSolutionPartner(BigInteger baseNum, BigInteger target) {
-    BigInteger[] result = target.subtract(baseNum.pow(2)).sqrtAndRemainder();
-    BigInteger solutionPartner = result[0];
-    BigInteger remainder = result[1];
-    return remainder.equals(BigInteger.ZERO) ? solutionPartner : null;
+    BigInteger[] partnerAndRemainder = target.subtract(baseNum.pow(2)).sqrtAndRemainder();
+    return partnerAndRemainder[1].equals(BigInteger.ZERO) ? partnerAndRemainder[0] : null;
   }
 
   public static BigInteger[] solve(int[] arr) {
+    System.out.println("\ninput=" + Arrays.toString(arr));
+    
     target = BigInteger.ONE;
     for(int i = 0; i < arr.length; i += 4) {
       target = multiplyNextFour(target, arr[i], arr[i+1], arr[i+2], arr[i+3]);
     }
 
-    for(BigInteger i = BigInteger.ZERO; i.compareTo(target) <= 0; i = i.add(BigInteger.ONE)) {
+    System.out.println("target=" + target);
+
+    for(BigInteger i = target.sqrt(); i.compareTo(BigInteger.ZERO) >= 0; i = i.subtract(BigInteger.ONE)) {
       solutionPartner = getSolutionPartner(i, target);
       if(solutionPartner != null) {
         solutionBase = i;
@@ -34,10 +36,7 @@ public class ProdSeq {
       }
     }
 
-    System.out.println("input=" + Arrays.toString(arr));
-    System.out.println("target=" + target);
     System.out.println("solution=" + solutionBase + ", " + solutionPartner);
-    System.out.println();
     return new BigInteger[]{solutionBase, solutionPartner};
   }
 }

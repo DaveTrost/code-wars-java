@@ -9,6 +9,7 @@ class testKata {
 
     private static void runProdSequences() {
       ProdSeq.solve(new int[]{21, 24, 15, 22, 1, 2, 1, 0});   // "396" "1857"
+      ProdSeq.solve(new int[]{3, 3, 9, 9});  // "0" "54"
 
       int[] a0 = {0, 7, 0, 0};
       ProdSeq.solve(a0);  // "0" "0"
@@ -37,7 +38,17 @@ class testKata {
       int[] a8 = {6, 6, 6, 6};
       ProdSeq.solve(a8); // "0" "72"
       
-      ProdSeq.solve(new int[]{3, 3, 9, 9});  // "0" "54"
+      int[] a9 = {3, 2, 5, 5, 4, 2, 6, 6, 9, 3, 3, 2, 3, 7, 2, 3, 4, 9, 6, 7, 3, 8, 8, 7, 6, 3, 6, 6};
+      ProdSeq.solve(a9); // "426561876000" "1579500000" 
+      
+      int[] a10 = {3, 2, 5, 5, 4, 2, 6, 6, 9, 3, 3, 2, 3, 7, 2, 3, 4, 9, 6, 7, 3, 8, 8, 7, 6, 3, 6, 6, 4, 4, 5, 3};
+      ProdSeq.solve(a10); // "14070173817600" "400723200" 
+      
+      int[] a11 = {3, 2, 5, 5, 4, 2, 6, 6, 9, 3, 3, 2, 3, 7, 2, 3, 4, 9, 6, 7, 3, 8, 8, 7, 6, 3, 6, 6, 4, 4, 5, 3, 9, 8, 3, 9};
+      ProdSeq.solve(a11); // ? ?
+      
+      int[] a12 = {3, 2, 5, 5, 4, 2, 6, 6, 9, 3, 3, 2, 3, 7, 2, 3, 4, 9, 6, 7, 3, 8, 8, 7, 6, 3, 6, 6, 4, 4, 5, 3, 9, 8, 3, 9, 2, 2, 6, 6};
+      ProdSeq.solve(a12); // ? ?
     }
 
     private static void runCountingDuplicates() {
