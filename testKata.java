@@ -40,9 +40,16 @@ class testKata {
       ProdSeq.solve(new int[]{3, 3, 9, 9});  // "0" "54"
     }
 
+    private static void runCountingDuplicates() {
+      CountingDuplicates.duplicateCount("abcde");
+      CountingDuplicates.duplicateCount("abcdea");
+      CountingDuplicates.duplicateCount("indivisibility");
+    }
+
     public static void main(String[] args) {
       // runBankerPlan();
-      runProdSequences();
+      // runProdSequences();
+      runCountingDuplicates();
     }
 
 }
