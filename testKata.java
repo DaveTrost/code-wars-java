@@ -48,8 +48,8 @@ class testKata {
 
     public static void main(String[] args) {
       // runBankerPlan();
-      // runProdSequences();
-      runCountingDuplicates();
+      runProdSequences();
+      // runCountingDuplicates();
     }
 
 }
