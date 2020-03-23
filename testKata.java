@@ -60,10 +60,15 @@ class testKata {
       CountingDuplicates.duplicateCount("indivisibility");
     }
 
+    private static void runOldSchoolTexting() {
+      System.out.println(OldSchoolText.sendMessage("hey"));
+    }
+
     public static void main(String[] args) {
       // runBankerPlan();
-      runProdSequences();
+      // runProdSequences();
       // runCountingDuplicates();
+      runOldSchoolTexting();
     }
 
 }
