@@ -62,6 +62,10 @@ class testKata {
 
     private static void runOldSchoolTexting() {
       System.out.println(OldSchoolText.sendMessage("hey"));
+      System.out.println(OldSchoolText.sendMessage("one two three"));
+      System.out.println(OldSchoolText.sendMessage("Hello World!"));
+      System.out.println(OldSchoolText.sendMessage("Def Con 1!"));
+      System.out.println(OldSchoolText.sendMessage("A-z"));
     }
 
     public static void main(String[] args) {
